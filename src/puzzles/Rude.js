@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, Stack, Container, Col, Row } from "react-bootstrap";
 import ChatBox from '../ChatBox';
-import InputBox from '../InputBox';
+import InputBox from '../SubmitBox';
 
 function Rude() {
   const chat = [

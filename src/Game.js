@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tabs, Tab } from 'react-bootstrap';
-import SadBoiHours from './puzzles/Puzzle1';
+import SadBoiHours from './puzzles/Cards';
 import Rude from './puzzles/Rude';
 
 
