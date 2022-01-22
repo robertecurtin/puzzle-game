@@ -4,6 +4,7 @@ import SadBoiHours from './puzzles/Cards';
 import Rude from './puzzles/Rude';
 import JustBusiness from './puzzles/JustBusiness';
 import StoryTime from './puzzles/StoryTime';
+import Besties from './puzzles/Besties';
 
 function Game() {
   return <div className='Game'>
@@ -19,6 +20,9 @@ function Game() {
   </Tab>
   <Tab eventKey="StoryTime" title="Story tim">
     <StoryTime />
+  </Tab>
+  <Tab eventKey="Besties" title="Besties">
+    <Besties />
   </Tab>
 </Tabs>
   </div>;
