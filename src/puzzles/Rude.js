@@ -14,7 +14,6 @@ function Rude() {
   ];
   return <Card>
     <Card.Body>
-      <Card.Title>Rude</Card.Title>
       <Card.Subtitle className="mb-2 text-muted">whats up nerd</Card.Subtitle>
       <Card.Text>
         <Container>

@@ -3,7 +3,7 @@ import { Tabs, Tab } from 'react-bootstrap';
 import SadBoiHours from './puzzles/Cards';
 import Rude from './puzzles/Rude';
 import JustBusiness from './puzzles/JustBusiness';
-
+import StoryTime from './puzzles/StoryTime';
 
 function Game() {
   return <div className='Game'>
@@ -14,8 +14,11 @@ function Game() {
   <Tab eventKey="rude" title="Rude">
     <Rude />
   </Tab>
-  <Tab eventKey="contact" title="Nothing Personal">
+  <Tab eventKey="nothingPersonal" title="Nothing personal">
     <JustBusiness />
+  </Tab>
+  <Tab eventKey="StoryTime" title="Story tim">
+    <StoryTime />
   </Tab>
 </Tabs>
   </div>;
