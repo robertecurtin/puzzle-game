@@ -11,7 +11,7 @@ const SubmitBox = (props) => {
     event.stopPropagation();
     const target = event.currentTarget;
     const expected = terribleCypher.decode(answers[props.puzzleId]);
-    const actual = target[0].value;
+    const actual = target[0].value.toUpperCase();
     if (expected == actual) {
       setSucceeded(true);
     }

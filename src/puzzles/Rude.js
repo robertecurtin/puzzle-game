@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, Stack, Container, Col, Row } from "react-bootstrap";
 import ChatBox from '../ChatBox';
-import InputBox from '../SubmitBox';
+import SubmitBox from '../SubmitBox';
 
 function Rude() {
   const chat = [
@@ -31,7 +31,7 @@ function Rude() {
         <Row>
           <Col fluid />
           <Col fluid>
-            <InputBox prompt={"reply"} submitText={"Send"} puzzleId={0} />
+            <SubmitBox prompt={"reply"} submitText={"Send"} puzzleId={0} />
           </Col>
         </Row>
       </Container>

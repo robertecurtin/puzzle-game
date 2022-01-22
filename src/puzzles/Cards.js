@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Card, Container, Col, Row } from "react-bootstrap";
+import SubmitBox from '../SubmitBox';
 import cardinal from '../assets/cardinal.png';
 import teardrop from '../assets/teardrop.png';
 
@@ -27,6 +28,9 @@ function Cards() {
         All my classes are hard, no matter what school I go to!
       </Card.Subtitle>
       <Container>
+        <Row>
+        <SubmitBox prompt={"reply"} submitText={"Send"} puzzleId={1} />
+        </Row>
         {array.map((row) => {
           return <Row key={row} >
             {row.map((col) => {
