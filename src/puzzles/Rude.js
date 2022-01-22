@@ -31,7 +31,7 @@ function Rude() {
         <Row>
           <Col fluid />
           <Col fluid>
-            <InputBox text={chat[0]} />
+            <InputBox prompt={"reply"} submitText={"Send"} puzzleId={0} />
           </Col>
         </Row>
       </Container>

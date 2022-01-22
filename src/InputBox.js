@@ -1,14 +1,17 @@
 import React from 'react';
 import { Button, Form } from "react-bootstrap";
 import answers from "./SpoilersHereDontLookUnlessYouKnowWhatYoureGettingInto";
+import terribleCypher from "./utils/terribleCypher";
 
-const InputBox = () => {
+const InputBox = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     event.stopPropagation();
     const target = event.currentTarget;
-    console.log(target.firstChild.value, answers.answer1);
-    if (answers.answer1 == target.firstChild.value) {
+    const expected = terribleCypher.decode(answers[props.puzzleId]);
+    const actual = target.firstChild.value;
+    console.log(expected, actual);
+    if (expected == actual) {
       console.log("you did it!");
     }
     else {
@@ -18,8 +21,8 @@ const InputBox = () => {
 
   return <>
     <Form onSubmit={handleSubmit}>
-      <Form.Control type="reply" placeholder="reply"></Form.Control>
-      <Button variety="primary" type="submit">Send</Button>
+      <Form.Control type="reply" placeholder={props.prompt}></Form.Control>
+      <Button variety="primary" type="submit">{props.submitText}</Button>
     </Form>
   </>;
 };
