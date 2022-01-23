@@ -45,7 +45,7 @@ function Besties() {
     <Card.Body>
       <Card.Title>{"Besties"}</Card.Title>
       <Card.Subtitle className="mb-2 text-muted">
-        These are some of my friends! They promise they'll behave...
+        {"These are some of my friends! They promise they'll behave..."}
       </Card.Subtitle>
       <Card.Text>
         <Stack gap={3}>

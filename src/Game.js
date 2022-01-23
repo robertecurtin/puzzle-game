@@ -8,7 +8,7 @@ import Besties from './puzzles/Besties';
 
 function Game() {
   return <div className='Game'>
-    <Tabs defaultActiveKey="sadBoiHours" id="uncontrolled-tab-example" className="mb-3">
+    <Tabs defaultActiveKey="sadBoiHours" id="gameTabs" className="mb-3">
   <Tab eventKey="sadBoiHours" title="Learning is not in the cards">
     <SadBoiHours />
   </Tab>

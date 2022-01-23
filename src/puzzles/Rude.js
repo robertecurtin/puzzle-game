@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { Card, Stack, Container, Col, Row } from "react-bootstrap";
-import ChatBox from '../ChatBox';
+import { Card, Container, Col, Row } from "react-bootstrap";
+import ChatBox from '../components/ChatBox';
 import SubmitBox from '../SubmitBox';
 
 function Rude() {
@@ -19,27 +19,47 @@ function Rude() {
         i always say what i mean
       </Card.Subtitle>
       <Card.Text>
-        <Container>
+        <Container fluid>
+          {chatLog()}
           <Row>
+            <Col fluid />
             <Col fluid>
-              <Stack gap={3}>
-                {chat.map((line) => {
-                  return <ChatBox key={line} text={line} />;
-                })}
-              </Stack>
+              <SubmitBox prompt={"reply"} submitText={"Send"} puzzleId={0} color={"blue"} />
             </Col>
-          <Col fluid />
+          </Row>
+        </Container>
+      </Card.Text>
+    </Card.Body>
+  </Card >;
+
+  function chatLog() {
+    return <Row>
+      <Container>
+        <Row>
+          <Col>
+            <ChatBox key={"hey"} text={"hey"} />
+          </Col>
         </Row>
         <Row>
           <Col fluid />
+          <Col >
+            <ChatBox key={"hey"} text={"hey"} color={"blue"} />
+          </Col>
+        </Row>
+        <Row>
           <Col fluid>
-            <SubmitBox prompt={"reply"} submitText={"Send"} puzzleId={0} />
+            {chat.map((line) => {
+              return <Row key={line}>
+                <Col>
+                  <ChatBox text={line} />
+                </Col>
+              </Row>;
+            })}
           </Col>
         </Row>
       </Container>
-    </Card.Text>
-  </Card.Body>
-  </Card >;
+    </Row>;
+  }
 }
 
 export default Rude;
