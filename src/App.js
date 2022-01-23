@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Game from './Game';
+import SideMenu from './SideMenu';
 
 class App extends Component {
   render () {
     return <div className='App'>
-      <Game />
+      <SideMenu />
     </div>;
   }
 }

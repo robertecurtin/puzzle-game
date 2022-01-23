@@ -1,10 +1,4 @@
 import React from 'react';
-import { Tabs, Tab } from 'react-bootstrap';
-import SadBoiHours from './puzzles/Cards';
-import Rude from './puzzles/Rude';
-import JustBusiness from './puzzles/JustBusiness';
-import StoryTime from './puzzles/StoryTime';
-import Besties from './puzzles/Besties';
 
 function Game() {
   return <div className='Game'>
