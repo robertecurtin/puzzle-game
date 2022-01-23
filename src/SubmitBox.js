@@ -45,8 +45,7 @@ const SubmitBox = (props) => {
     {succeeded? "Success!" : "Incorrect guess: "} {previousGuess}
   </Alert>;
 
-  return <>
-    <Form inline onSubmit={handleSubmit}>
+  return <Form inline onSubmit={handleSubmit}>
       <Row>
         <Col>
           {prompt}
@@ -57,8 +56,7 @@ const SubmitBox = (props) => {
         <Col/>
       </Row>
       <Row><Col>{response}</Col></Row>
-    </Form>
-  </>;
+    </Form>;
 };
 
 export default SubmitBox;
