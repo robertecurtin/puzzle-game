@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { Container, Col, Row } from "react-bootstrap";
 import cardinal from '../assets/cardinal.png';
 import teardrop from '../assets/teardrop.png';
+import { Grid } from '@mui/material';
 import PuzzleTabContainer from '../components/PuzzleTabContainer';
 
 // is it crappy code or security by obscurity? i'll never tell
@@ -26,18 +26,18 @@ function Cards() {
       title: "Learning is not in the cards",
       subTitle: "All my classes are hard, no matter what school I go to!",
       puzzleId: 1,
-      contents: < Container fluid>
+      contents: < Grid container spacing={2} >
         {
           array.map((row, y) => {
-            return <Row key={row} className="mx-auto my-3">
+            console.log(row.length);
+            return <Grid container key={row} columns={row.length} spacing={2} >
               {row.map((col, x) => {
-                return <Col key={x+y} md="auto" > <Icon val={col} /> </Col>;
+                return <Grid item key={x+y} > <Icon val={col} /> </Grid>;
               })}
-              <Col fluid />
-            </Row>;
+            </Grid>;
           })
         }
-      </Container >
+        </Grid>
     }
   );
 }

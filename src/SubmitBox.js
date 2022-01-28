@@ -1,62 +1,66 @@
+import { IconButton, TextField, Paper } from '@mui/material';
 import React from 'react';
-import { Button, Form, Col, Row, Alert } from "react-bootstrap";
+import Divider from '@mui/material/Divider';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import DoneIcon from '@mui/icons-material/Done';
 import answers from "./SpoilersHereDontLookUnlessYouKnowWhatYoureGettingInto";
 import terribleCypher from "./utils/terribleCypher";
+
 
 const SubmitBox = (props) => {
   const [succeeded, setSucceeded] = React.useState(false);
   const [failed, setFailed] = React.useState(false);
-  const [previousGuess, setPreviousGuess] = React.useState("");
+  // const [previousGuess, setPreviousGuess] = React.useState("");
+  const [guess, setGuess] = React.useState("");
 
   const handleSubmit = (event) => {
+    console.log(event);
     event.preventDefault();
     event.stopPropagation();
-    const target = event.currentTarget;
     const expected = terribleCypher.decode(answers[props.puzzleId]);
-    const actual = target[0].value.toUpperCase().replace(/[^A-Z0-9]/gi, '');
+    const actual = guess.toUpperCase().replace(/[^A-Z0-9]/gi, '');
     if (expected == actual) {
       setSucceeded(true);
       setFailed(false);
     }
     else {
-      setPreviousGuess(actual);
+      // setPreviousGuess(actual);
       setFailed(true);
     }
   };
 
-  const sendButton =
-    <Button
-      variety="primary"
-      type="submit"
-      disabled={succeeded}>{succeeded ? "Correct!" : props.submitText}
-    </Button>;
+  const inputChanged = (e) => {
+    setGuess(e.target.value);
+    setFailed(false);
+  };
 
-  const prompt = <Form.Control
-    type="reply"
-    placeholder={props.prompt}
-    disabled={succeeded}>
-  </Form.Control>;
+  const handleKeyPress = (e) => {
+    if(e.key === 'Enter') {
+      handleSubmit(e);
+    }
+  };
 
-  const response = <Alert
-    dismissible
-    onClose={() => setFailed(false)}
-    show={failed || succeeded}
-  >
-    {succeeded? "Success!" : "Incorrect guess: "} {previousGuess}
-  </Alert>;
+  return (
+    <Paper
+      component="form"
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
+    >
+      <TextField
+        sx={{ ml: 1, flex: 1 }}
+        placeholder="Submit your answer"
+        inputProps={{ 'aria-label': 'submit your answer' }}
+        onChange={inputChanged}
+        onKeyPress={handleKeyPress}
+        disabled={succeeded}
+        error={failed}
 
-  return <Form inline onSubmit={handleSubmit}>
-      <Row>
-        <Col>
-          {prompt}
-        </Col>
-        <Col>
-          {sendButton}
-        </Col>
-        <Col/>
-      </Row>
-      <Row><Col>{response}</Col></Row>
-    </Form>;
+      />
+      <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
+      <IconButton color="primary" sx={{ p: '10px' }} aria-label="directions" onClick={handleSubmit} disabled={succeeded} >
+        {succeeded ? <DoneIcon /> : <ArrowForwardIosIcon />}
+      </IconButton>
+    </Paper>
+  );
 };
 
 export default SubmitBox;
