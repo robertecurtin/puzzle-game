@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import Button from '@mui/material/Button';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+function App() {
+  return <Button
+  variant="contained"
+  color="primary">
+      Hello World
+    </Button>;
+}
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+ReactDOM.render(<App />, document.querySelector('#app'));

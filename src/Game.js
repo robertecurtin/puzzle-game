@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tabs, Tab } from 'react-bootstrap';
+import { Tabs, Tab } from '@mui/material';
 import SadBoiHours from './puzzles/Cards';
 import Rude from './puzzles/Rude';
 import JustBusiness from './puzzles/JustBusiness';
@@ -8,20 +8,27 @@ import Besties from './puzzles/Besties';
 
 function Game() {
   return <div className='Game'>
-    <Tabs defaultActiveKey="sadBoiHours" id="gameTabs" className="mb-3">
-  <Tab eventKey="sadBoiHours" title="Learning is not in the cards">
+    <Tabs defaultValue="sadBoiHours" id="gameTabs" className="mb-3">
+      <TabsList>
+        <Tab>Learning is not in the cards</Tab>
+        <Tab>Rude</Tab>
+        <Tab>Nothing personal</Tab>
+        <Tab>Story tim</Tab>
+        <Tab>Besties</Tab>
+      </TabsList>
+  <Tab value="sadBoiHours" title="">
     <SadBoiHours />
   </Tab>
-  <Tab eventKey="rude" title="Rude">
+  <Tab value="rude" title="Rude">
     <Rude />
   </Tab>
-  <Tab eventKey="nothingPersonal" title="Nothing personal">
+  <Tab value="nothingPersonal" title="Nothing personal">
     <JustBusiness />
   </Tab>
-  <Tab eventKey="StoryTime" title="Story tim">
+  <Tab value="StoryTime" title="Story tim">
     <StoryTime />
   </Tab>
-  <Tab eventKey="Besties" title="Besties">
+  <Tab value="Besties" title="Besties">
     <Besties />
   </Tab>
 </Tabs>
