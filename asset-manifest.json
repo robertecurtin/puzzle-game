@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.js": "/puzzle-game/static/js/main.c7dd50df.chunk.js",
+    "main.js.map": "/puzzle-game/static/js/main.c7dd50df.chunk.js.map",
+    "runtime-main.js": "/puzzle-game/static/js/runtime-main.6d3e6005.js",
+    "runtime-main.js.map": "/puzzle-game/static/js/runtime-main.6d3e6005.js.map",
+    "static/js/2.b1490528.chunk.js": "/puzzle-game/static/js/2.b1490528.chunk.js",
+    "static/js/2.b1490528.chunk.js.map": "/puzzle-game/static/js/2.b1490528.chunk.js.map",
+    "index.html": "/puzzle-game/index.html",
+    "static/js/2.b1490528.chunk.js.LICENSE.txt": "/puzzle-game/static/js/2.b1490528.chunk.js.LICENSE.txt",
+    "static/media/age-restricted.a148f3bb.jpeg": "/puzzle-game/static/media/age-restricted.a148f3bb.jpeg",
+    "static/media/big_guys_bad_side.24776fee.jpg": "/puzzle-game/static/media/big_guys_bad_side.24776fee.jpg",
+    "static/media/borat_priya.b973ce7f.jpg": "/puzzle-game/static/media/borat_priya.b973ce7f.jpg",
+    "static/media/cardinal.b300fd84.png": "/puzzle-game/static/media/cardinal.b300fd84.png",
+    "static/media/chris.bfe87131.png": "/puzzle-game/static/media/chris.bfe87131.png",
+    "static/media/clifford.16b6cda2.jpg": "/puzzle-game/static/media/clifford.16b6cda2.jpg",
+    "static/media/dall_or_grante.5d74d65c.jpg": "/puzzle-game/static/media/dall_or_grante.5d74d65c.jpg",
+    "static/media/furious.e05601d4.png": "/puzzle-game/static/media/furious.e05601d4.png",
+    "static/media/head.463f7e66.png": "/puzzle-game/static/media/head.463f7e66.png",
+    "static/media/holey.f1dba5b1.jpg": "/puzzle-game/static/media/holey.f1dba5b1.jpg",
+    "static/media/keenarnor.e89343b2.png": "/puzzle-game/static/media/keenarnor.e89343b2.png",
+    "static/media/lonely.8c3232a7.jpg": "/puzzle-game/static/media/lonely.8c3232a7.jpg",
+    "static/media/mirror.eb18e0bf.png": "/puzzle-game/static/media/mirror.eb18e0bf.png",
+    "static/media/mr-arimnaes.fb65dfd7.png": "/puzzle-game/static/media/mr-arimnaes.fb65dfd7.png",
+    "static/media/roobit.f060e935.png": "/puzzle-game/static/media/roobit.f060e935.png",
+    "static/media/sensei.3fdf57d1.png": "/puzzle-game/static/media/sensei.3fdf57d1.png",
+    "static/media/teardrop.50fc3203.png": "/puzzle-game/static/media/teardrop.50fc3203.png",
+    "static/media/terminal.cc2d2127.png": "/puzzle-game/static/media/terminal.cc2d2127.png",
+    "static/media/warped-lamp.14513f5d.png": "/puzzle-game/static/media/warped-lamp.14513f5d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6d3e6005.js",
+    "static/js/2.b1490528.chunk.js",
+    "static/js/main.c7dd50df.chunk.js"
+  ]
+}
