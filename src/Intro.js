@@ -7,9 +7,10 @@ function Intro() {
   return <Stack spacing={3}>
     <h2>Pizza game is the best game youve probably never played!</h2>
     <h3>if you havent, fisrt of all shame on you</h3>
-    <h3>but also everytin you need to know is in this traler:</h3>
+    <h3>but also everytin you need to know is in this traler</h3>
+    also i didnt feel like baking cookies so your progess wont be saved if you colse the tab
     {pizzaGameTrailer}
-    plus you wont need them until the game game also there am no hints on this page except the vidoe so dont worry and haev fun!!(tm)
+    also you wont need need to have watch tralior until the game game but it will help also there am no hints on this page except the vidoe so dont worry and haev fun!!(tm)
   </Stack>;
 };
 

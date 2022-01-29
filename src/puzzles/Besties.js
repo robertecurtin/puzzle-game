@@ -45,7 +45,7 @@ function Besties() {
     {
       title: "Besties",
       subTitle: "These are some of my best friends! They promise they'll behave...",
-      puzzleId: 2,
+      puzzleId: 4,
       contents: < Stack spacing={2} >
         {clues.map((line, i) => {
           return <ImageListItem key={i}>

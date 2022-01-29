@@ -38,7 +38,7 @@ function Game() {
 
   return <div className='Game'>
     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-      <Tabs value={tab} onChange={changeTab} className="mb-3">
+      <Tabs value={tab} onChange={changeTab} className="mb-3" variant="scrollable">
         {tabText.map((text) => {
           return <Tab key={text} label={text}></Tab>;
         })}

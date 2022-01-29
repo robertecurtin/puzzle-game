@@ -37,7 +37,7 @@ const SubmitBox = (props) => {
       handleSubmit(e);
     }
   };
-  const secret = () => {
+  const secretEnding = () => {
     return <div>
       <h2>you freed a the me! thank you forever!</h2>
       <div>
@@ -47,8 +47,9 @@ const SubmitBox = (props) => {
     </div>
     </div>;
   };
+  const showSecretEnding = (typeof props.secret !== 'undefined');
 
-  return secret && succeeded ? secret() : (
+  return showSecretEnding && succeeded ? secretEnding() : (
     <Paper
       component="form"
       sx={{ p: '2px 4px', display: 'flex', alignItems: 'center' }}
