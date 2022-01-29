@@ -1,4 +1,4 @@
-module.exports = {
+const terribleCypher = {
   encode: (str) => {
     let o = [];
     for (let i = 0; i < str.length; i++) {
@@ -10,3 +10,5 @@ module.exports = {
       return String.fromCharCode(...arr);
   }
 };
+
+export default terribleCypher;

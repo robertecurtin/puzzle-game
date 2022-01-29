@@ -1,5 +1,6 @@
 import React from 'react';
 import { Tabs, Tab, Box } from '@mui/material';
+import Intro from './Intro';
 import SadBoiHours from './puzzles/Cards';
 import Rude from './puzzles/Rude';
 import JustBusiness from './puzzles/JustBusiness';
@@ -8,6 +9,7 @@ import Besties from './puzzles/Besties';
 import PizzaGameGame from './puzzles/PizzaGameGame';
 
 const puzzles = [
+  () => <Intro />,
   () => <SadBoiHours />,
   () => <Rude />,
   () => <JustBusiness />,
@@ -17,6 +19,7 @@ const puzzles = [
 ];
 
 const tabText = [
+  "Intro",
   "Learning is not in the cards",
   "Rude",
   "Nothing personal",
@@ -26,7 +29,7 @@ const tabText = [
 ];
 
 function Game() {
-  const [tab, setTab] = React.useState(4);
+  const [tab, setTab] = React.useState(0);
 
   const changeTab = (_, a) => {
     console.log(a);
