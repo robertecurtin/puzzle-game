@@ -8,23 +8,32 @@ import PuzzleTabContainer from '../components/PuzzleTabContainer';
 // is it crappy code or security by obscurity? i'll never tell
 
 function Icon(props) {
+  if (props.val == "") {
+    return null;
+  }
   return <img
     src={props.val == "c" ? cardinal : teardrop}
-    style={{ maxHeight: 100, maxWidth: 100, transform: props.val == "r" ? "scaleX(-1)" : "" }}
+    style={{
+      maxWidth: "100%",
+      height: "auto",
+      width: "auto",
+      transform: props.val == "r" ? "scaleX(-1)" : ""
+    }}
   />;
 }
 
 const array = [
-  ["c", "c", "c", "t"],
-  ["c", "c", "t", "c", "c"],
+  ["c", "c", "c", "t", "","",""],
+  ["c", "c", "t", "c", "c", "", ""],
   ["c", "r", "r", "c", "c", "c", "t"],
 ];
 
 function ImageRow(row, y) {
   return <Grid container columns={row.length} spacing={2} >
     {row.map((col, x) => {
-      return <Grid item key={x + y} > <Icon val={col} /> </Grid>;
+      return <Grid item key={x + y} xs={1} > <Icon val={col} /> </Grid>;
     })}
+    <Grid item />
   </Grid>;
 };
 
@@ -34,11 +43,11 @@ function Cards() {
       title: "Learning is not in the cards",
       subTitle: "All my classes are hard, no matter what school I go to!",
       puzzleId: 1,
-      contents: < Grid container spacing={2} >
+      contents: < Grid container >
         {
           array.map((row, y) => {
             return <Grid container key={row}>
-                {ImageRow(row, y)}
+              {ImageRow(row, y)}
             </Grid>;
           })
         }

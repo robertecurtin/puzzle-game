@@ -1,5 +1,5 @@
 
-import { Chip, Stack } from '@mui/material';
+import { Divider, Stack, Typography } from '@mui/material';
 import React from 'react';
 import PuzzleTabContainer from '../components/PuzzleTabContainer';
 
@@ -22,11 +22,14 @@ function StoryTime() {
     {
       title: "Story Tim",
       subTitle: "I lov a good stry! Here are sme of my favrites:",
-      puzzleId: 2,
+      puzzleId: 3,
       contents: < Stack spacing={3} >
-          {clues.map((line) => {
-            return <Chip key={line} label={line} ></Chip>;
-          })}
+        {clues.map((line) => {
+          return <Typography key={line} variant="inherit">
+            {line}
+            <Divider />
+          </Typography>;
+        })}
       </Stack>
     }
   );

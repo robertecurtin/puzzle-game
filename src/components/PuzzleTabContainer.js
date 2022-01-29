@@ -8,7 +8,8 @@ const PuzzleTabContainer = (props) => {
     <div>{props.subTitle}</div>
     <SubmitBox prompt={"reply"} submitText={"Send"} puzzleId={props.puzzleId} secret={props.secret} />
     <Paper
-      sx={{ p: '2px 4px', display: 'flex', alignItems: 'left' }}
+    elevation={3}
+      sx={{ p: '2px 8px', display: 'flex', alignItems: 'left' }}
     >
       {props.contents}
     </Paper>
