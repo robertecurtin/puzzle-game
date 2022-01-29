@@ -1,5 +1,5 @@
 
-import { Paper, Stack } from '@mui/material';
+import { Chip, Stack } from '@mui/material';
 import React from 'react';
 import PuzzleTabContainer from '../components/PuzzleTabContainer';
 
@@ -22,7 +22,7 @@ function JustBusiness() {
       puzzleId: 2,
       contents: < Stack spacing={3} >
           {clues.map((line) => {
-            return <Paper key={line}>{line}</Paper>;
+            return <Chip key={line} color="info" variant="outlined" label={line} ></Chip>;
           })}
       </Stack>
     }

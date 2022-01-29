@@ -3,22 +3,15 @@ import { Tabs, Tab, Box } from '@mui/material';
 import SadBoiHours from './puzzles/Cards';
 import Rude from './puzzles/Rude';
 import JustBusiness from './puzzles/JustBusiness';
-// import StoryTime from './puzzles/StoryTime';
-// import Besties from './puzzles/Besties';
+import StoryTime from './puzzles/StoryTime';
+import Besties from './puzzles/Besties';
 
-// const puzzles = [
-//   () => <SadBoiHours />,
-//   () => <Rude />,
-//   () => <JustBusiness />,
-//   () => <StoryTime />,
-//   () => <Besties />
-// ];
 const puzzles = [
   () => <SadBoiHours />,
   () => <Rude />,
   () => <JustBusiness />,
-  () => <div>4</div>,
-  () => <div>5</div>,
+  () => <StoryTime />,
+  () => <Besties />
 ];
 
 const tabText = [
@@ -30,7 +23,7 @@ const tabText = [
 ];
 
 function Game() {
-  const [tab, setTab] = React.useState(1);
+  const [tab, setTab] = React.useState(4);
 
   const changeTab = (_, a) => {
     console.log(a);
