@@ -2,10 +2,12 @@ import { IconButton, TextField, Paper } from '@mui/material';
 import React from 'react';
 import Divider from '@mui/material/Divider';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import DoneIcon from '@mui/icons-material/Done';
 import answers from "./SpoilersHereDontLookUnlessYouKnowWhatYoureGettingInto";
 import terribleCypher from "./utils/terribleCypher";
 import roobit from "./assets/roobit.png";
+import arimNaes from "./assets/arim-naes.png";
+import arimYays from "./assets/arim-yays.png";
+import { Box } from '@mui/system';
 
 const SubmitBox = (props) => {
   const [succeeded, setSucceeded] = React.useState(false);
@@ -13,7 +15,6 @@ const SubmitBox = (props) => {
   const [guess, setGuess] = React.useState("");
 
   const handleSubmit = (event) => {
-    console.log(event);
     event.preventDefault();
     event.stopPropagation();
     const expected = terribleCypher.decode(answers[props.puzzleId]);
@@ -27,13 +28,27 @@ const SubmitBox = (props) => {
     }
   };
 
+  const Arimface = () => {
+    return <Box
+      sx={{
+        boxShadow: 1,
+        borderRadius: 1,
+        height: "auto",
+      }}
+    ><img
+        src={succeeded ? arimYays : arimNaes}
+        style={{ width: "100%", maxWidth: 100, height: "auto" }}
+      />
+    </Box>;
+  };
+
   const inputChanged = (e) => {
     setGuess(e.target.value);
     setFailed(false);
   };
 
   const handleKeyPress = (e) => {
-    if(e.key === 'Enter') {
+    if (e.key === 'Enter') {
       handleSubmit(e);
     }
   };
@@ -41,18 +56,24 @@ const SubmitBox = (props) => {
     return <div>
       <h2>you freed a the me! thank you forever!</h2>
       <div>
-      <img
-      src={roobit}
-    />
-    </div>
+        <img
+          src={roobit}
+        />
+      </div>
     </div>;
   };
   const showSecretEnding = (typeof props.secret !== 'undefined');
 
+  const SubmitButton = () => {
+    return <IconButton color="primary" sx={{ p: '10px' }} aria-label="directions" onClick={handleSubmit} disabled={succeeded} >
+      {(succeeded || failed) ? <Arimface /> : <ArrowForwardIosIcon />}
+    </IconButton>;
+  };
+
   return showSecretEnding && succeeded ? secretEnding() : (
     <Paper
       component="form"
-      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center' }}
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', height: 60 }}
     >
       <TextField
         sx={{ ml: 1, flex: 1 }}
@@ -62,12 +83,9 @@ const SubmitBox = (props) => {
         onKeyPress={handleKeyPress}
         disabled={succeeded}
         error={failed}
-
       />
       <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
-      <IconButton color="primary" sx={{ p: '10px' }} aria-label="directions" onClick={handleSubmit} disabled={succeeded} >
-        {succeeded ? <DoneIcon /> : <ArrowForwardIosIcon />}
-      </IconButton>
+      <SubmitButton />
     </Paper>
   );
 };

@@ -32,7 +32,6 @@ function Game() {
   const [tab, setTab] = React.useState(0);
 
   const changeTab = (_, a) => {
-    console.log(a);
     setTab(a);
   };
 
