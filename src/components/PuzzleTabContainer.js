@@ -4,7 +4,9 @@ import { Paper, Stack } from '@mui/material';
 
 const PuzzleTabContainer = (props) => {
   return <Stack spacing={3}>
-    <SubmitBox prompt={"reply"} submitText={"Send"} puzzleId={props.puzzleId} />
+    <div />
+    <div>{props.subTitle}</div>
+    <SubmitBox prompt={"reply"} submitText={"Send"} puzzleId={props.puzzleId} secret={props.secret} />
     <Paper
       sx={{ p: '2px 4px', display: 'flex', alignItems: 'left' }}
     >

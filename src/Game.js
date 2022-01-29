@@ -5,13 +5,15 @@ import Rude from './puzzles/Rude';
 import JustBusiness from './puzzles/JustBusiness';
 import StoryTime from './puzzles/StoryTime';
 import Besties from './puzzles/Besties';
+import PizzaGameGame from './puzzles/PizzaGameGame';
 
 const puzzles = [
   () => <SadBoiHours />,
   () => <Rude />,
   () => <JustBusiness />,
   () => <StoryTime />,
-  () => <Besties />
+  () => <Besties />,
+  () => <PizzaGameGame />
 ];
 
 const tabText = [
@@ -19,7 +21,8 @@ const tabText = [
   "Rude",
   "Nothing personal",
   "Story tim",
-  "Besties"
+  "Besties",
+  "Pizza Game Game"
 ];
 
 function Game() {
@@ -37,9 +40,6 @@ function Game() {
           return <Tab key={text} label={text}></Tab>;
         })}
       </Tabs>
-      {/* {puzzles.map((callback) => {
-        return callback();
-      })} */}
     </Box>
     <Box>
       {puzzles[tab]()}

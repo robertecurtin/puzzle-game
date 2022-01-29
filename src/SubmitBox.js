@@ -5,7 +5,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import DoneIcon from '@mui/icons-material/Done';
 import answers from "./SpoilersHereDontLookUnlessYouKnowWhatYoureGettingInto";
 import terribleCypher from "./utils/terribleCypher";
-
+import roobit from "./assets/roobit.png";
 
 const SubmitBox = (props) => {
   const [succeeded, setSucceeded] = React.useState(false);
@@ -37,8 +37,18 @@ const SubmitBox = (props) => {
       handleSubmit(e);
     }
   };
+  const secret = () => {
+    return <div>
+      <h2>you freed a the me! thank you forever!</h2>
+      <div>
+      <img
+      src={roobit}
+    />
+    </div>
+    </div>;
+  };
 
-  return (
+  return secret && succeeded ? secret() : (
     <Paper
       component="form"
       sx={{ p: '2px 4px', display: 'flex', alignItems: 'center' }}

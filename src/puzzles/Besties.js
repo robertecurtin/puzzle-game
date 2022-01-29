@@ -44,11 +44,11 @@ function Besties() {
   return PuzzleTabContainer(
     {
       title: "Besties",
-      subTitle: "hese are some of my friends! They promise they'll behave...",
+      subTitle: "These are some of my best friends! They promise they'll behave...",
       puzzleId: 2,
       contents: < Stack spacing={2} >
-        {clues.map((line) => {
-          return <ImageListItem key={line}>
+        {clues.map((line, i) => {
+          return <ImageListItem key={i}>
                 <Image image={line.image} />
                 <ImageListItemBar title={line.clue} />
               </ImageListItem>;
@@ -56,24 +56,6 @@ function Besties() {
       </Stack>
     }
   );
-  // return <Card>
-  //   <Card.Body>
-  //     <Card.Title>{"Besties"}</Card.Title>
-  //     <Card.Subtitle className="mb-2 text-muted">
-  //       {"These are some of my friends! They promise they'll behave..."}
-  //     </Card.Subtitle>
-  //     <Card.Text>
-  //       <Stack gap={3}>
-  //         <SubmitBox prompt={"reply"} submitText={"Send"} puzzleId={2} />
-  //         {clues.map((line) => {
-  //           return <div key={line}>
-  //             <Image image={line} />
-  //           </div>;
-  //         })}
-  //       </Stack>
-  //     </Card.Text>
-  //   </Card.Body>
-  // </Card >;
 }
 
 export default Besties;
