@@ -10,7 +10,6 @@ import terribleCypher from "./utils/terribleCypher";
 const SubmitBox = (props) => {
   const [succeeded, setSucceeded] = React.useState(false);
   const [failed, setFailed] = React.useState(false);
-  // const [previousGuess, setPreviousGuess] = React.useState("");
   const [guess, setGuess] = React.useState("");
 
   const handleSubmit = (event) => {
@@ -24,7 +23,6 @@ const SubmitBox = (props) => {
       setFailed(false);
     }
     else {
-      // setPreviousGuess(actual);
       setFailed(true);
     }
   };
@@ -43,11 +41,11 @@ const SubmitBox = (props) => {
   return (
     <Paper
       component="form"
-      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center' }}
     >
       <TextField
         sx={{ ml: 1, flex: 1 }}
-        placeholder="Submit your answer"
+        placeholder={props.prompt}
         inputProps={{ 'aria-label': 'submit your answer' }}
         onChange={inputChanged}
         onKeyPress={handleKeyPress}

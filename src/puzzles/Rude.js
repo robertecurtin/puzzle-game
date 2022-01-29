@@ -1,7 +1,8 @@
 
+import { Grid } from '@mui/material';
 import React from 'react';
-import { Card, Container, Col, Row } from "react-bootstrap";
-import ChatBox from '../components/ChatBox';
+import { Avatar } from "@mui/material";
+import { ChatBox, ReceiverMessage, SenderMessage } from "mui-chat-box";
 import SubmitBox from '../SubmitBox';
 
 function Rude() {
@@ -12,54 +13,32 @@ function Rude() {
     "smell you later",
     "youll probab smell bad"
   ];
-  return <Card>
-    <Card.Body>
-      <Card.Title>{"whats up nerd"}</Card.Title>
-      <Card.Subtitle className="mb-2 text-muted">
-        i always say what i mean
-      </Card.Subtitle>
-      <Card.Text>
-        <Container fluid>
-          {chatLog()}
-          <Row>
-            <Col fluid />
-            <Col fluid>
-              <SubmitBox prompt={"reply"} submitText={"Send"} puzzleId={0} color={"blue"} />
-            </Col>
-          </Row>
-        </Container>
-      </Card.Text>
-    </Card.Body>
-  </Card >;
+  const chatLog = () => {
+    return <ChatBox>
+      <ReceiverMessage>
+        hey
+      </ReceiverMessage>
+      <SenderMessage>
+        hey
+      </SenderMessage>
+      {
+        chat.map((line) => {
+          return <ReceiverMessage avater={<Avatar>KS</Avatar>} key={line}>
+            {line}
+          </ReceiverMessage>;
+        })
+      }
+      <SenderMessage>
+        <SubmitBox prompt={"reply"} submitText={"Send"} puzzleId={0} color={"blue"} />
+      </SenderMessage>
+    </ChatBox>;
+  };
 
-  function chatLog() {
-    return <Row>
-      <Container>
-        <Row>
-          <Col>
-            <ChatBox key={"hey"} text={"hey"} />
-          </Col>
-        </Row>
-        <Row>
-          <Col fluid />
-          <Col >
-            <ChatBox key={"hey"} text={"hey"} color={"blue"} />
-          </Col>
-        </Row>
-        <Row>
-          <Col fluid>
-            {chat.map((line) => {
-              return <Row key={line}>
-                <Col>
-                  <ChatBox text={line} />
-                </Col>
-              </Row>;
-            })}
-          </Col>
-        </Row>
-      </Container>
-    </Row>;
-  }
+  return <Grid container>
+    <Grid item>
+      {chatLog()}
+    </Grid>
+  </Grid>;
 }
 
 export default Rude;

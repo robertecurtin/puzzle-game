@@ -1,25 +1,16 @@
 import React from 'react';
-import { Box } from '@mui/system';
 import SubmitBox from '../SubmitBox';
-// Contains a title, subtitle, answer submittion field, and content
+import { Paper, Stack } from '@mui/material';
 
 const PuzzleTabContainer = (props) => {
-  return <Box>
-    <SubmitBox prompt={"reply"} submitText={"Send"} puzzleId={props.puzzleId} />;
-    {props.contents}
-  </Box>;
-  // return <Card border="secondary" >
-  //   <Card.Body>
-  //     <Card.Title>{props.title}</Card.Title>
-  //     <Card.Subtitle className="mb-2 text-muted">
-  //       {props.subTitle}
-  //     </Card.Subtitle>
-  //     <Card.Text>
-  //       <SubmitBox prompt={"reply"} submitText={"Send"} puzzleId={props.puzzleId} />
-  //       {props.contents}
-  //     </Card.Text>
-  //   </Card.Body>
-  // </Card>;
+  return <Stack spacing={3}>
+    <SubmitBox prompt={"reply"} submitText={"Send"} puzzleId={props.puzzleId} />
+    <Paper
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'left' }}
+    >
+      {props.contents}
+    </Paper>
+  </Stack>;
 };
 
 export default PuzzleTabContainer;

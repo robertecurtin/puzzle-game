@@ -20,6 +20,14 @@ const array = [
   ["c", "r", "r", "c", "c", "c", "t"],
 ];
 
+function ImageRow(row, y) {
+  return <Grid container columns={row.length} spacing={2} >
+    {row.map((col, x) => {
+      return <Grid item key={x + y} > <Icon val={col} /> </Grid>;
+    })}
+  </Grid>;
+};
+
 function Cards() {
   return PuzzleTabContainer(
     {
@@ -29,15 +37,12 @@ function Cards() {
       contents: < Grid container spacing={2} >
         {
           array.map((row, y) => {
-            console.log(row.length);
-            return <Grid container key={row} columns={row.length} spacing={2} >
-              {row.map((col, x) => {
-                return <Grid item key={x+y} > <Icon val={col} /> </Grid>;
-              })}
+            return <Grid container key={row}>
+                {ImageRow(row, y)}
             </Grid>;
           })
         }
-        </Grid>
+      </Grid>
     }
   );
 }
