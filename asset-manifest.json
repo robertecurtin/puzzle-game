@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/puzzle-game/static/js/main.057f2357.chunk.js",
-    "main.js.map": "/puzzle-game/static/js/main.057f2357.chunk.js.map",
+    "main.js": "/puzzle-game/static/js/main.5c709663.chunk.js",
+    "main.js.map": "/puzzle-game/static/js/main.5c709663.chunk.js.map",
     "runtime-main.js": "/puzzle-game/static/js/runtime-main.6d3e6005.js",
     "runtime-main.js.map": "/puzzle-game/static/js/runtime-main.6d3e6005.js.map",
-    "static/js/2.67bc53f2.chunk.js": "/puzzle-game/static/js/2.67bc53f2.chunk.js",
-    "static/js/2.67bc53f2.chunk.js.map": "/puzzle-game/static/js/2.67bc53f2.chunk.js.map",
+    "static/js/2.4d0a972d.chunk.js": "/puzzle-game/static/js/2.4d0a972d.chunk.js",
+    "static/js/2.4d0a972d.chunk.js.map": "/puzzle-game/static/js/2.4d0a972d.chunk.js.map",
     "index.html": "/puzzle-game/index.html",
-    "static/js/2.67bc53f2.chunk.js.LICENSE.txt": "/puzzle-game/static/js/2.67bc53f2.chunk.js.LICENSE.txt",
+    "static/js/2.4d0a972d.chunk.js.LICENSE.txt": "/puzzle-game/static/js/2.4d0a972d.chunk.js.LICENSE.txt",
     "static/media/age-restricted.a148f3bb.jpeg": "/puzzle-game/static/media/age-restricted.a148f3bb.jpeg",
     "static/media/arim-naes.47c8c3b1.png": "/puzzle-game/static/media/arim-naes.47c8c3b1.png",
     "static/media/arim-yays.41c2cc8f.png": "/puzzle-game/static/media/arim-yays.41c2cc8f.png",
@@ -26,13 +26,13 @@
     "static/media/mr-arimnaes.fb65dfd7.png": "/puzzle-game/static/media/mr-arimnaes.fb65dfd7.png",
     "static/media/roobit.f060e935.png": "/puzzle-game/static/media/roobit.f060e935.png",
     "static/media/sensei.3fdf57d1.png": "/puzzle-game/static/media/sensei.3fdf57d1.png",
-    "static/media/teardrop.50fc3203.png": "/puzzle-game/static/media/teardrop.50fc3203.png",
+    "static/media/teardrop.4f4fa028.png": "/puzzle-game/static/media/teardrop.4f4fa028.png",
     "static/media/terminal.cc2d2127.png": "/puzzle-game/static/media/terminal.cc2d2127.png",
     "static/media/warped-lamp.14513f5d.png": "/puzzle-game/static/media/warped-lamp.14513f5d.png"
   },
   "entrypoints": [
     "static/js/runtime-main.6d3e6005.js",
-    "static/js/2.67bc53f2.chunk.js",
-    "static/js/main.057f2357.chunk.js"
+    "static/js/2.4d0a972d.chunk.js",
+    "static/js/main.5c709663.chunk.js"
   ]
 }
