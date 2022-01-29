@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.js": "/puzzle-game/static/js/main.45c14f98.chunk.js",
-    "main.js.map": "/puzzle-game/static/js/main.45c14f98.chunk.js.map",
+    "main.js": "/puzzle-game/static/js/main.057f2357.chunk.js",
+    "main.js.map": "/puzzle-game/static/js/main.057f2357.chunk.js.map",
     "runtime-main.js": "/puzzle-game/static/js/runtime-main.6d3e6005.js",
     "runtime-main.js.map": "/puzzle-game/static/js/runtime-main.6d3e6005.js.map",
-    "static/js/2.516cdf28.chunk.js": "/puzzle-game/static/js/2.516cdf28.chunk.js",
-    "static/js/2.516cdf28.chunk.js.map": "/puzzle-game/static/js/2.516cdf28.chunk.js.map",
+    "static/js/2.67bc53f2.chunk.js": "/puzzle-game/static/js/2.67bc53f2.chunk.js",
+    "static/js/2.67bc53f2.chunk.js.map": "/puzzle-game/static/js/2.67bc53f2.chunk.js.map",
     "index.html": "/puzzle-game/index.html",
-    "static/js/2.516cdf28.chunk.js.LICENSE.txt": "/puzzle-game/static/js/2.516cdf28.chunk.js.LICENSE.txt",
+    "static/js/2.67bc53f2.chunk.js.LICENSE.txt": "/puzzle-game/static/js/2.67bc53f2.chunk.js.LICENSE.txt",
     "static/media/age-restricted.a148f3bb.jpeg": "/puzzle-game/static/media/age-restricted.a148f3bb.jpeg",
+    "static/media/arim-naes.47c8c3b1.png": "/puzzle-game/static/media/arim-naes.47c8c3b1.png",
+    "static/media/arim-yays.41c2cc8f.png": "/puzzle-game/static/media/arim-yays.41c2cc8f.png",
     "static/media/big_guys_bad_side.24776fee.jpg": "/puzzle-game/static/media/big_guys_bad_side.24776fee.jpg",
     "static/media/borat_priya.b973ce7f.jpg": "/puzzle-game/static/media/borat_priya.b973ce7f.jpg",
     "static/media/cardinal.b300fd84.png": "/puzzle-game/static/media/cardinal.b300fd84.png",
@@ -30,7 +32,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.6d3e6005.js",
-    "static/js/2.516cdf28.chunk.js",
-    "static/js/main.45c14f98.chunk.js"
+    "static/js/2.67bc53f2.chunk.js",
+    "static/js/main.057f2357.chunk.js"
   ]
 }
