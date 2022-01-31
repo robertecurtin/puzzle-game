@@ -6,7 +6,7 @@ import PuzzleTabContainer from '../components/PuzzleTabContainer';
 function JustBusiness() {
   const clues = [
     "Only Bolsonaro can destroy it",
-    "Robert and his strip of brined salmon",
+    "Robert made a game about his strip of brined salmon",
     "Long-range nuclear capability (-C)",
     "Pirates of the Seven Seeds",
     "Instant coffee: Just add water!",
