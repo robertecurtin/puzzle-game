@@ -25,7 +25,7 @@ function Icon(props) {
 const array = [
   ["c", "c", "c", "t", "","",""],
   ["c", "c", "t", "c", "c", "", ""],
-  ["c", "r", "r", "c", "c", "c", "t"],
+  ["c", "r", "r", "c", "c", "c", "c", "t"],
 ];
 
 function ImageRow(row, y) {
